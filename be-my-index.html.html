@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Be My Valentine 💘</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 80px;
+      background: #fff0f5;
+      overflow: hidden;
+    }
+    h2 {
+      color: #ff4d6d;
+    }
+    button {
+      font-size: 22px;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 20px;
+    }
+    .yes-button {
+      background-color: #ff4d6d;
+      color: white;
+    }
+    .no-button {
+      background-color: #cccccc;
+      position: absolute;
+      left: 50%;
+      top: 60%;
+    }
+  </style>
+</head>
+<body>
+  <h2>Faaabi, will you be my Valentine? 💖</h2>
+  <button class="yes-button" onclick="handleYesClick()">Yes 😍</button>
+  <button class="no-button" onmouseover="runAway()">No 😢</button>
+  <script>
+    function runAway() {
+      const noButton = document.querySelector('.no-button');
+      const x = Math.random() * (window.innerWidth - 120);
+      const y = Math.random() * (window.innerHeight - 80);
+      noButton.style.left = x + "px";
+      noButton.style.top = y + "px";
+    }
+    function handleYesClick() {
+      document.body.innerHTML = `
+        <h1>YAYYY 💕😍</h1>
+        <p>Happy Valentine's Day!</p>
+      `;
+    }
+  </script>
+</body>
+</html>
